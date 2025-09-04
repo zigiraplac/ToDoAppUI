@@ -43,36 +43,36 @@ const apiCall = async (endpoint: string, options: RequestInit = {}) => {
 // API service functions
 export const todoAPI = {
   // Get all todos
-  getAll: () => apiCall('/todos'),
+  getAll: () => apiCall(''),
   
   // Get single todo by ID
-  getById: (id: string | number) => apiCall(`/todos/${id}`),
+  getById: (id: string | number) => apiCall(`/${id}`),
   
   // Create new todo
-  create: (todoData: any) => apiCall('/todos', {
+  create: (todoData: any) => apiCall('', {
     method: 'POST',
     body: JSON.stringify(todoData),
   }),
   
   // Update entire todo
-  update: (id: string | number, todoData: any) => apiCall(`/todos/${id}`, {
+  update: (id: string | number, todoData: any) => apiCall(`/${id}`, {
     method: 'PUT',
     body: JSON.stringify(todoData),
   }),
   
   // Partially update todo
-  patch: (id: string | number, updates: any) => apiCall(`/todos/${id}`, {
+  patch: (id: string | number, updates: any) => apiCall(`/${id}`, {
     method: 'PATCH',
     body: JSON.stringify(updates),
   }),
   
   // Delete todo
-  delete: (id: string | number) => apiCall(`/todos/${id}`, {
+  delete: (id: string | number) => apiCall(`/${id}`, {
     method: 'DELETE',
   }),
   
   // Toggle completion status
-  toggleComplete: (id: string | number, completed: boolean) => apiCall(`/todos/${id}`, {
+  toggleComplete: (id: string | number, completed: boolean) => apiCall(`/${id}`, {
     method: 'PATCH',
     body: JSON.stringify({ completed }),
   }),

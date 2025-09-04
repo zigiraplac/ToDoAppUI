@@ -1,7 +1,7 @@
 // API Configuration
-export const API_BASE_URL = 'http://localhost:8080/tasks'; // API URL
+export const API_BASE_URL = '/api'; // Using Vite proxy to avoid CORS issues
 // API Configuration
-// export const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:8080/tasks'; in case of using .env file
+// export const API_BASE_URL = p rocess.env.REACT_APP_API_URL || 'http://localhost:8080/tasks'; in case of using .env file
 
 // Priority levels
 export const PRIORITY_LEVELS = {
